@@ -40,7 +40,7 @@ The objective of this project is to accurately detect and recognize faces from u
 
 face-recognition-using-deepface/
 │
-├── Face_detectection.ipynb   # Main DeepFace implementation notebook
+├── face_recognition.ipynb   # Main DeepFace implementation notebook
 ├── README.md                # Project documentation
 ├── requirements.txt        # Python dependencies
 ├── dataset/                # Images of three individuals (if added)
@@ -48,7 +48,7 @@ face-recognition-using-deepface/
 │   ├── person2/
 │   └── person3/
 ├── .gitignore
-└── LICENSE
+└── LICENSE
 
 ## Clone link
 git clone https://github.com/usmanshaikh90044-creator/face-recognition-using-deepface.git
