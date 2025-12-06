@@ -36,19 +36,26 @@ The objective of this project is to accurately detect and recognize faces from u
 
 ---
 
-## 📂 Project Structure
+## 📁 Project Structure
 
 face-recognition-using-deepface/
 │
 ├── face_recognition.ipynb   # Main DeepFace implementation notebook
 ├── README.md                # Project documentation
 ├── requirements.txt        # Python dependencies
-├── dataset/                # Images of three individuals (if added)
+├── dataset/                # Images of three individuals (structure only, not uploaded)
 │   ├── person1/
 │   ├── person2/
 │   └── person3/
 ├── .gitignore
 └── LICENSE
+
+## 🗂 Dataset Information
+
+This project was tested using a *custom private dataset of three individuals*.  
+For privacy and security reasons, the dataset is *not included in this repository*.
+
+You can create your own dataset using the same folder structure shown above.
 
 ## Clone link
 git clone https://github.com/usmanshaikh90044-creator/face-recognition-using-deepface.git
