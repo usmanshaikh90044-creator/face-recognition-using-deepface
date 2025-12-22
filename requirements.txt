@@ -1,8 +1,8 @@
+streamlit
 deepface
-opencv-python
-tensorflow
-keras
+opencv-python-headless
 numpy
-pandas
-mtcnn
-tqdm
+pillow
+tensorflow
+tf-keras
+
