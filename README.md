@@ -60,3 +60,4 @@ You can create your own dataset using the same folder structure shown above.
 ## Clone link
 git clone https://github.com/usmanshaikh90044-creator/face-recognition-using-deepface.git
 
+Force rebuild to apply runtime.txt
