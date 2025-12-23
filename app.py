@@ -1,25 +1,38 @@
 import os
+# Suppress TensorFlow warnings (recommended for cloud logs)
+os.environ["TF_CPP_MIN_LOG_LEVEL"] = "2"
+
 import numpy as np
 import streamlit as st
 from PIL import Image
 from deepface import DeepFace
 
-st.set_page_config(page_title="Private Face Recognition Demo", layout="centered")
+# Streamlit page config
+st.set_page_config(
+    page_title="Private Face Recognition Demo",
+    layout="centered"
+)
 
 st.title("🔐 Private Face Recognition Demo")
 st.write(
     "This demo recognizes only pre-consented identities and does not store uploaded images."
 )
 
+# Constants
 REFERENCE_DIR = "reference_faces"
 MODEL_NAME = "Facenet"
 
-# 🔒 Stricter threshold to avoid false positives
+# Thresholds
 THRESHOLD = 0.48
 MIN_CONFIDENCE = 70  # percentage
 
+
 @st.cache_resource
 def load_reference_embeddings():
+    """
+    Load and cache embeddings for all reference faces.
+    Runs only once per app restart.
+    """
     embeddings_db = {}
 
     for person in os.listdir(REFERENCE_DIR):
@@ -41,6 +54,7 @@ def load_reference_embeddings():
                 person_embeddings.append(embedding)
 
             except Exception:
+                # Skip images where face detection fails
                 pass
 
         if person_embeddings:
@@ -55,10 +69,13 @@ def cosine_distance(a, b):
     return 1 - np.dot(a, b) / (np.linalg.norm(a) * np.linalg.norm(b))
 
 
+# Load reference faces
 st.info("Loading reference faces...")
 reference_embeddings = load_reference_embeddings()
 st.success("Reference faces loaded.")
 
+
+# Image upload
 uploaded_file = st.file_uploader(
     "Upload an image for recognition",
     type=["jpg", "jpeg", "png"]
@@ -95,3 +112,4 @@ if uploaded_file:
 
     except Exception:
         st.error("No face detected. Please upload a clear face image.")
+
