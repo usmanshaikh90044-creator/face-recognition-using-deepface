@@ -1,63 +1,87 @@
 # Face Recognition Using DeepFace
 
-This project is a face recognition system built using the DeepFace deep learning framework. It is designed to identify three individuals(two of them are my friends) using a custom image dataset with high accuracy. The system uses pre-trained face embeddings provided by DeepFace, eliminating the need for training a model from scratch.
+This project is a face recognition system built using the **DeepFace** deep learning framework.  
+It identifies **three individuals (including two friends)** using a custom image dataset and pre-trained facial embeddings, without training a model from scratch.
 
 ---
 
 ## 📌 Project Overview
 
-Face recognition is a key application of computer vision and artificial intelligence. This project demonstrates a practical implementation of face recognition using:
-- A custom dataset of three individuals
-- The DeepFace library for facial embeddings
-- Python and OpenCV for image processing
+Face recognition is a widely used application of computer vision and AI.  
+This project demonstrates a **practical and real-world implementation** of face recognition using:
 
-The objective of this project is to accurately detect and recognize faces from unseen images.
+- A custom dataset of three individuals
+- DeepFace pre-trained face embedding models
+- Python-based image processing and similarity matching
+
+The system compares facial embeddings to recognize whether an uploaded image matches a known identity.
 
 ---
 
 ## 🚀 Features
 
 - Face detection and recognition
-- Identification of three individuals
-- High accuracy using DeepFace pre-trained models
+- Identification of three known individuals
+- Uses DeepFace pre-trained models (no training required)
+- Confidence-based matching to reduce false positives
 - Works on real-world images
-- Lightweight and easy to run
+- Simple and modular project structure
 
 ---
 
 ## 🧠 Technologies Used
 
-- Python
-- DeepFace
-- OpenCV
-- TensorFlow / Keras
-- NumPy
-- Google Colab (for development)
+- Python  
+- DeepFace  
+- TensorFlow / Keras  
+- OpenCV  
+- NumPy  
+- Streamlit (for application interface)  
 
 ---
 
 ## 📁 Project Structure
-
 face-recognition-using-deepface/
 │
-├── face_recognition.ipynb   # Main DeepFace implementation notebook
-├── README.md                # Project documentation
-├── requirements.txt        # Python dependencies
-├── dataset/                # Images of three individuals (structure only, not uploaded)
-│   ├── person1/
-│   ├── person2/
-│   └── person3/
+├── app.py # Streamlit application
+├── reference_faces/ # Reference images (one folder per person)
+│ ├── person1/
+│ ├── person2/
+│ └── person3/
+├── .streamlit/ # Streamlit configuration
+├── requirements.txt # Project dependencies
+├── runtime.txt # Runtime configuration (for deployment)
+├── README.md # Project documentation
 ├── .gitignore
-└── LICENSE
+└── LICENSE
+
+
+---
 
 ## 🗂 Dataset Information
 
-This project was tested using a *custom private dataset of three individuals*.  
-For privacy and security reasons, the dataset is *not included in this repository*.
+This project uses a **private custom dataset of three individuals**.  
+For privacy reasons, the actual images are **not publicly shared**.
 
-You can create your own dataset using the same folder structure shown above.
+You can test the project by creating your own dataset using the same folder structure inside `reference_faces/`.
 
-## Clone link
-git clone https://github.com/usmanshaikh90044-creator/face-recognition-using-deepface.git
+---
 
-Force rebuild to apply runtime.txt
+## 🚀 Deployment Status
+
+The application was prepared for cloud deployment using **Streamlit**.  
+However, deployment was not completed due to **Python runtime compatibility limitations on free-tier cloud platforms** when using DeepFace and TensorFlow.
+
+- Application code is production-ready  
+- Dependencies and runtime were configured correctly  
+- Local execution works as expected  
+
+---
+
+## ▶️ How to Run Locally
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/usmanshaikh90044-creator/face-recognition-using-deepface.git
+
+
