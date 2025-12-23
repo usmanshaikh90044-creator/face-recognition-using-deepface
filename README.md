@@ -36,11 +36,12 @@ The system compares facial embeddings to recognize whether an uploaded image mat
 - TensorFlow / Keras  
 - OpenCV  
 - NumPy  
-- Streamlit (for application interface)  
+- Streamlit  
 
 ---
 
 ## 📁 Project Structure
+
 face-recognition-using-deepface/
 │
 ├── app.py # Streamlit application
@@ -54,6 +55,7 @@ face-recognition-using-deepface/
 ├── README.md # Project documentation
 ├── .gitignore
 └── LICENSE
+
 
 
 ---
@@ -72,6 +74,8 @@ You can test the project by creating your own dataset using the same folder stru
 The application was prepared for cloud deployment using **Streamlit**.  
 However, deployment was not completed due to **Python runtime compatibility limitations on free-tier cloud platforms** when using DeepFace and TensorFlow.
 
+**The application runs successfully in a local environment.**
+
 - Application code is production-ready  
 - Dependencies and runtime were configured correctly  
 - Local execution works as expected  
@@ -81,7 +85,12 @@ However, deployment was not completed due to **Python runtime compatibility limi
 ## ▶️ How to Run Locally
 
 1. Clone the repository:
-   ```bash
    git clone https://github.com/usmanshaikh90044-creator/face-recognition-using-deepface.git
 
+   
+2. Install dependencies:
+   pip install -r requirements.txt
 
+
+3. Run the Streamlit app:
+   streamlit run app.py
